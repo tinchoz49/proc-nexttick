@@ -3,4 +3,4 @@ providers:
 
 browsers:
   - name: chromium
-  # - name: ff
+  - name: ff
