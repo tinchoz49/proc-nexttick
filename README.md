@@ -22,6 +22,14 @@ nextTick((arg1, arg2) => {
 }, 0, 1)
 ```
 
+In Node.js it will use the native `process.nextTick` without changes.
+
+In the browser:
+
+1. It tries to use `queueMicrotask`.
+2. Fallback to use a `process` shim implementation provided by some bundler tool like browserify or webpack.
+3. Fallback to use Promises.
+
 ## <a name="issues"></a> Issues
 
 :bug: If you found an issue we encourage you to report it on [github](https://github.com/tinchoz49/proc-nexttick/issues). Please specify your OS and the actions to reproduce it.
