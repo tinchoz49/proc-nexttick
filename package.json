@@ -1,0 +1,60 @@
+{
+  "name": "proc-nexttick",
+  "version": "0.0.1",
+  "description": "Universal process.nextTick for latest browsers",
+  "main": "index.js",
+  "browser": "browser.js",
+  "files": [
+    "browser.js",
+    "index.js"
+  ],
+  "scripts": {
+    "start": "node index.js",
+    "test": "npm run test:node && npm run test:browser",
+    "test:node": "tape test.js",
+    "test:browser": "airtap test.js",
+    "posttest": "npm run lint",
+    "lint": "xd-ns \"**/*.js\"",
+    "version": "chan release --allow-yanked ${npm_package_version} && git add .",
+    "prepublishOnly": "npm test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@geut/chan": "^2.0.0",
+    "@geut/xd": "^1.5.0",
+    "airtap": "^4.0.1",
+    "airtap-playwright": "^1.0.0",
+    "standard": "^14.3.1",
+    "tape": "^5.0.1"
+  },
+  "jest": {
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ]
+  },
+  "standard": {
+    "env": [
+      "jest",
+      "node",
+      "browser"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinchoz49/proc-nexttick.git"
+  },
+  "keywords": [
+    "nexttick",
+    "microtask",
+    "queueMicrotask"
+  ],
+  "author": {
+    "name": "Martín Acosta",
+    "email": "tinchoz49@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tinchoz49/proc-nexttick/issues"
+  },
+  "homepage": "https://github.com/tinchoz49/proc-nexttick#readme"
+}
