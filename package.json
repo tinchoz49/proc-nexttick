@@ -1,6 +1,6 @@
 {
   "name": "proc-nexttick",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Universal process.nextTick for latest browsers",
   "main": "index.js",
   "browser": "browser.js",
